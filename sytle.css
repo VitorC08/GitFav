@@ -1,0 +1,199 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --background-color: #0a0a0a;
+  --bc-line: hsla(194, 64%, 6%, 0.5);
+  --white: #ffffff;
+  --nofav-backgroung: #141414;
+  --blue-700: #06181c;
+  --blue-200: #86e9ff;
+  --blue-400: #065e7c;
+  --blue-600: #092d38;
+  --gray-400: #7c7c8a;
+  --gray-200: #e1e1e6;
+  --red-400: #f75a68;
+
+  --ff-global: "Roboto", sans-serif;
+  --ff-secondary: "Roboto Mono", monospace;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--background-color);
+}
+
+#app {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+* p {
+  color: var(--gray-200);
+  font-size: 2rem;
+}
+
+body,
+* {
+  font-family: var(--ff-global);
+}
+
+header {
+  max-width: 112rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 13rem auto 8.7rem;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 0.8rem;
+}
+
+nav input {
+  background-color: var(--blue-700);
+  color: var(--gray-400);
+  font-size: 1.6rem;
+  line-height: 100%;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  width: 46.2rem;
+}
+
+#submit {
+  background-color: var(--blue-400);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.8rem;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  background-color: var(--nofav-backgroung);
+  max-height: 68rem;
+  overflow-y: overlay;
+  border: 1px solid var(--blue-200);
+  border-radius: 1.2rem;
+}
+
+.no-favs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  margin: 20rem auto 28.7rem;
+}
+
+table th {
+  background-color: var(--blue-400);
+  text-align: start;
+  color: var(--gray-200);
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.6rem 4rem;
+}
+
+tbody tr {
+  border: 1px solid var(--blue-200);
+}
+
+table td {
+  padding: 2.4rem 4rem;
+}
+
+td.user {
+  display: flex;
+  width: 50.4rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  color: var(--gray-200);
+  text-decoration: none;
+}
+
+td.user p {
+  margin: 0rem 0rem 0.8rem;
+}
+
+td.repositories,
+td.followers {
+  color: var(--gray-200);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.remove {
+  border: none;
+  background-color: transparent;
+  color: var(--red-400);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p {
+  color: var(--gray-200);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+tr:nth-child(even) {
+  background-color: var(--blue-600);
+}
+
+h2 {
+  color: var(--gray-200);
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: var(--ff-secondary);
+}
+
+.star {
+  width: 13rem;
+  height: 13rem;
+}
+
+.hide {
+  display: none;
+}
+
+.table::-webkit-scrollbar {
+  width: 2rem;
+}
+
+.table::-webkit-scrollbar-thumb {
+  background-color: var(--blue-200);
+  border-radius: 1rem;
+
+  border: 0.5rem solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
