@@ -67,6 +67,10 @@ nav input {
   width: 46.2rem;
 }
 
+nav input:focus{
+    outline: none;
+}
+
 #submit {
   background-color: var(--blue-400);
   color: var(--white);
@@ -79,6 +83,17 @@ nav input {
   align-items: center;
   cursor: pointer;
   gap: 0.8rem;
+  transition: all .3s ease;
+}
+
+#submit:hover{
+background-color: var(--white);
+color: #065e7c;
+}
+
+#submit:hover svg path{
+    fill: var(--blue-400);
+    transition: all .3s ease;
 }
 
 table {

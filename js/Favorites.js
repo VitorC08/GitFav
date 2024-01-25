@@ -69,6 +69,13 @@ export class FavoritesView extends Favorites {
       this.add(value);
     };
 
+    addButton.addEventListener("hover", () => {
+      const starSvg = this.root.querySelector("nav button svg");
+
+      if (starSvg === "hover") {
+      }
+    });
+
     inputElement.addEventListener("keypress", (event) => {
       if (event.key === "Enter") {
         const { value } = inputElement;
@@ -142,10 +149,12 @@ export class FavoritesView extends Favorites {
   }
 
   emptyContent() {
-    if (this.entries.length !== 0) {
-      this.root.querySelector(".no-content").classList.add("hide");
-    } else {
+    const emptyEntries = this.entries.length === 0;
+
+    if (emptyEntries) {
       this.root.querySelector(".no-content").classList.remove("hide");
+    } else {
+      this.root.querySelector(".no-content").classList.add("hide");
     }
   }
 }
